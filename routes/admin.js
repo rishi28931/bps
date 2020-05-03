@@ -1,7 +1,12 @@
 const express = require('express');
+const path = require("path");
+const rootDir = require('../util/path.js');
+
+
 const router = express.Router();
 router.use('/add-bill', (req, res, next) => {
-    res.send("<h1>bill</h1>");
+    // res.sendfile(path.join(__dirname, "../", "views", 'bill.html'));
+    res.sendfile(path.join(rootDir, "views", 'bill.html'));
 
 });
 router.post('/bi', (req, res, next) => {
