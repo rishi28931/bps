@@ -1,0 +1,27 @@
+{
+    "name": "bps",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+        "node": "^14.0.0",
+        "nodemon": "^2.0.3"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js",
+        "run": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rishi28931/bps.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rishi28931/bps/issues"
+    },
+    "homepage": "https://github.com/rishi28931/bps#readme"
+}
