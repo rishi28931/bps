@@ -1,0 +1,38 @@
+<form action = "/api/customer" method="POST" class="ui form">
+   <div class="two fields">
+     <div class = "field">
+       <label for="name">Customer Name</label>
+       <input type="text" name="cname" class="form-control">
+     </div>
+     <div class = "field">
+       <label for="title">Payment Status</label>
+       <select id = "myList" name="pstatus" class = "ui dropdown">
+          <option value = "1">Paid</option>
+          <option value = "2">Pending</option>
+        </select>
+     </div>
+   </div>
+
+   <div class="two fields">
+     <div class = "field">
+       <label for="desc">Selling price</label>
+       <input type="number" name="sprice" class="form-control">
+     </div>
+     <div class = "field">
+        <label for="desc">Amount Paid</label>
+       <input type="number" name="apaid" class="form-control">
+     </div>
+   </div>
+
+   <div class="two fields">
+     <div class = "field">
+      <label for="desc">Customer Contact</label>
+       <input type="number" name="cmob" class="form-control">
+     </div>
+     <div class = "field">
+      <label for="desc">Date</label>
+       <input type="date" name="date" class="form-control">
+      </div>
+      </div>
+    <input type="submit" value="Add Member" class="fluid ui button">
+</form>

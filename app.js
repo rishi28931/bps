@@ -20,6 +20,9 @@ app.get("/",(req,res)=>{
     res.render("index");
 })
 
+app.get("/customer/new",(req,res)=>{
+    res.render("addnew")
+})
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(adminroutes);
