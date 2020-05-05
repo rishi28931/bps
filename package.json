@@ -4,9 +4,11 @@
     "description": "",
     "main": "app.js",
     "dependencies": {
+        "@handlebars/allow-prototype-access": "^1.0.3",
         "body-parser": "^1.19.0",
         "express": "^4.17.1",
         "express-handlebars": "^4.0.4",
+        "handlebars": "^4.7.6",
         "node": "^14.0.0",
         "nodemon": "^2.0.3"
     },
@@ -21,7 +23,7 @@
         "url": "git+https://github.com/rishi28931/bps.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "Rishabh, Sanya",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/rishi28931/bps/issues"
