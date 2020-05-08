@@ -7,34 +7,36 @@ const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-ac
 const app = express();
 const mongoose = require("mongoose");
 const MONGODB_URI = "mongodb+srv://rishabh:2452@cluster0-6298g.mongodb.net/test?retryWrites=true&w=majority";
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/myapp, {useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/myapp', { useNewUrlParser: true });
 
 
-        app.engine('handlebars', expressHandlebars({
-            handlebars: allowInsecurePrototypeAccess(Handlebars),
-            defaultLayout: 'main'
-        })); app.set('view engine', 'handlebars');
-        //app.set('views', 'views');
+app.engine('handlebars', expressHandlebars({
+    handlebars: allowInsecurePrototypeAccess(Handlebars),
+    defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
+//app.set('views', 'views');
 
-        const adminroutes = require("./routes/admin.js");
+const adminroutes = require("./routes/admin.js");
 
-        //Routes
-        app.get("/", (req, res) => {
-            res.render("index");
-        })
+//Routes
+app.get("/", (req, res) => {
+    res.render("index");
+})
 
-        app.get("/customer/new", (req, res) => {
-            res.render("addnew")
-        })
+app.get("/customer/new", (req, res) => {
+    res.render("addnew")
+})
 
-        app.use(bodyParser.urlencoded({ extended: false })); app.use(adminroutes);
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(adminroutes);
 
-        app.use((req, res, next) => {
+app.use((req, res, next) => {
 
-            res.status(404).send("<h1>not found</h1>");
+    res.status(404).send("<h1>not found</h1>");
 
-        });
+});
 
-        app.listen(process.env.PORT || 3000);
-        // const server = http.createServer(app);
-        // server.listen(5000);
+app.listen(process.env.PORT || 3000);
+// const server = http.createServer(app);
+// server.listen(5000);
