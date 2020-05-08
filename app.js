@@ -5,6 +5,7 @@ const Handlebars = require('handlebars')
 const expressHandlebars = require('express-handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access')
 const app = express();
+const mongoose = require("mongoose");
 const MONGODB_URI = "mongodb+srv://rishabh:2452@cluster0-6298g.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/myapp, {useNewUrlParser: true})
 
