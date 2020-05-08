@@ -5,6 +5,7 @@ const Handlebars = require('handlebars')
 const expressHandlebars = require('express-handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access')
 const app = express();
+const MONGODB_URI = "mongodb+srv://rishabh:2452@cluster0-6298g.mongodb.net/test?retryWrites=true&w=majority";
 
 app.engine('handlebars', expressHandlebars({
     handlebars: allowInsecurePrototypeAccess(Handlebars),
