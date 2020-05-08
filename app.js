@@ -3,12 +3,12 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const Handlebars = require('handlebars')
 const expressHandlebars = require('express-handlebars');
-const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
+const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access')
 const app = express();
 
 app.engine('handlebars', expressHandlebars({
     handlebars: allowInsecurePrototypeAccess(Handlebars),
-    defaultLayout :'main'
+    defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
 //app.set('views', 'views');
@@ -16,11 +16,11 @@ app.set('view engine', 'handlebars');
 const adminroutes = require("./routes/admin.js");
 
 //Routes
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.render("index");
 })
 
-app.get("/customer/new",(req,res)=>{
+app.get("/customer/new", (req, res) => {
     res.render("addnew")
 })
 
@@ -33,6 +33,6 @@ app.use((req, res, next) => {
 
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 // const server = http.createServer(app);
 // server.listen(5000);
